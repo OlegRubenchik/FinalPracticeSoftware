@@ -1,5 +1,6 @@
-
-
+/** 
+* 
+**/
 #include <iostream>
 #include <cassert>
 using namespace std;
@@ -7,9 +8,9 @@ const int SIZE = 5;
 
 
 //FUNCTION PROTOTYPES
-double sumOfRange(double arr[], int startIndex, int endIndex, int maxSize);
-double productOfRange(double arr[], int startIndex, int endIndex, int maxSize);
-bool allPositive(double arr[], int maxSize);
+double sumOfRange(const double arr[],const int startIndex,const int endIndex,const int maxSize);
+double productOfRange(const double arr[],const int startIndex,const int endIndex,const int maxSize);
+bool allPositive(const double arr[],const int maxSize);
 
 
 
@@ -63,7 +64,7 @@ int main() {
 
 	} while (reply != 0);
 }
-double sumOfRange(double arr[], int startIndex, int endIndex, int maxSize) {
+double sumOfRange(const double arr[],const int startIndex, const int endIndex,const int maxSize) {
 	double sum = 0;
 	assert(startIndex < endIndex);
 	assert(endIndex <= maxSize);
@@ -72,7 +73,7 @@ double sumOfRange(double arr[], int startIndex, int endIndex, int maxSize) {
 	}
 	return sum;
 }
-double productOfRange(double arr[], int startIndex, int endIndex, int maxSize) {
+double productOfRange(const double arr[],const int startIndex,const int endIndex,const int maxSize) {
 	double product = 1;
 	assert(startIndex < endIndex);
 	assert(endIndex <= maxSize);
@@ -81,7 +82,7 @@ double productOfRange(double arr[], int startIndex, int endIndex, int maxSize) {
 	}
 	return product;
 }
-bool allPositive(double arr[], int maxSize) {
+bool allPositive(const double arr[],const int maxSize) {
 	bool flag = true;
 	for (int i = 0;i < maxSize;i++) {
 		if (arr[i] < 0) flag = false;
