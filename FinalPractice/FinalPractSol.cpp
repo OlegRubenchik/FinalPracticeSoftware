@@ -1,3 +1,5 @@
+
+
 #include <iostream>
 #include <cassert>
 using namespace std;
@@ -42,4 +44,13 @@ double sumOfRange(double arr[], int startIndex, int endIndex, int maxSize) {
 		sum += arr[i];
 	}
 	return sum;
+}
+double productOfRange(double arr[], int startIndex, int endIndex, int maxSize) {
+	double product = 1;
+	assert(startIndex < endIndex);
+	assert(endIndex <= maxSize);
+	for (int i = startIndex;i < endIndex;i++) {
+		product *= arr[i];
+	}
+	return product;
 }
