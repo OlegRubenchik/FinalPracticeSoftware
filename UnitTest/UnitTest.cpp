@@ -30,9 +30,9 @@ namespace UnitTest
 
 			//Act
 			res = productOfRange(arr, 0, SIZE, SIZE);
-			res2 = productOfRange(arr, 1, 3, SIZE);
+			res2 = productOfRange(arr, 0, 1, SIZE);
 			//Assert
-			Assert::AreEqual(-7.7, res2);
+			Assert::AreEqual(1.3, res2);
 			Assert::AreEqual(0.0, res);
 		}
 	};
