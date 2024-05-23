@@ -100,7 +100,7 @@ double sumOfRange(const double arr[],const int startIndex, const int endIndex,co
 * @return Returns <code>product</code> the actual product.
 */
 double productOfRange(const double arr[],const int startIndex,const int endIndex,const int maxSize) {
-	double product = 1;
+	double product = 0;
 	assert(startIndex < endIndex);
 	assert(endIndex <= maxSize);
 	for (int i = startIndex;i < endIndex;i++) {
