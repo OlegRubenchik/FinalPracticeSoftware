@@ -25,11 +25,38 @@ int main() {
 		cout << "0)EXIT\n";
 		cin >> reply;
 		switch(reply) {
-		case 1: 
-			cout << sumOfRange(arr, 0, SIZE, SIZE);
+		case 1: {
+			int start, end;
+			cout << "Enter start index: ";
+			cin >> start;
+			assert(isdigit(start) == 0);
+			assert(start >= 0);
+			cout << "Enter end index: ";
+			cin >> end;
+			assert(isdigit(end) == 0);
+			assert(end >= 0);
+			cout << sumOfRange(arr, start, end, SIZE);
+			break;
+		}
+		case 2: {
+			int start, end;
+			cout << "Enter start index: ";
+			cin >> start;
+			assert(isdigit(start) == 0);
+			assert(start >= 0);
+			cout << "Enter end index: ";
+			cin >> end;
+			assert(isdigit(end) == 0);
+			assert(end >= 0);
+			cout << productOfRange(arr, start, end, SIZE);
+			break;
+		}
+		case 3:
+			if (allPositive(arr, SIZE)) cout << "All positive\n";
+			else cout << "Not all positive\n";
 			break;
 		case 0:
-			cout << "Have a good day!";
+			cout << "Have a good day!\n";
 			break;
 
 		}
