@@ -54,3 +54,10 @@ double productOfRange(double arr[], int startIndex, int endIndex, int maxSize) {
 	}
 	return product;
 }
+bool allPositive(double arr[], int maxSize) {
+	bool flag = true;
+	for (int i = 0;i < maxSize;i++) {
+		if (arr[i] < 0) flag = false;
+	}
+	return flag;
+}
